@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icones do google acesse aqui => https://fonts.google.com/icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
+    <link rel="stylesheet" href="./style.css ">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <select onchange="execCommandArea('fontName',this[this.selectedIndex].value)">
+            <option value="Arial">Arial</option>
+            <option value="Serif">Serif</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="sans-serif">sans-serif</option>
+            <option value="monospace">monospace</option>
+            <option value="Calibri">Calibri</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+        </select>
+
+        <input type="number" 
+            onkeyup="execCommandArea('fontSize',this.value)"
+            onclick="execCommandArea('fontSize',this.value)" 
+            id="inputNumber" min="1" max="7" value="3">
+
+        <button data-command="undo">
+            <i class="material-icons-round">undo</i>
+        </button>
+        <button data-command="redo">
+            <i class="material-icons-round">redo</i>
+        </button>
+        <button data-command="bold">
+            <i class="material-icons-round">format_bold</i>
+        </button>
+        <button data-command="italic">
+            <i class="material-icons-round">format_italic</i>
+        </button>
+        <button data-command="underline">
+            <i class="material-icons-round">format_underline</i>
+        </button>
+        <button data-command="selectAll">
+            <i class="material-icons-round">select_all</i>
+        </button>
+        <button data-command="cut">
+            <i class="material-icons-round">cut</i>
+        </button>
+        <button data-command="copy">
+            <i class="material-icons-round">copy</i>
+        </button>
+        <button data-command="justifyLeft">
+            <i class="material-icons-round">format_align_left</i>
+        </button>
+        <button data-command="justifyCenter">
+            <i class="material-icons-round">format_align_center</i>
+        </button>
+        <button data-command="justifyRight">
+            <i class="material-icons-round">format_align_right</i>
+        </button>
+    </div>
+    <iframe id="output" name="textField"></iframe>
+</body>
+<script src="./script.js"></script>
+
+</html>

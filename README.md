@@ -1,7 +1,7 @@
 # TextEditor
 TextEditor is a site created with the aim of getting to know the functioning of web text editors
 
-<img src="./git/display.png" width="500">
+<img src="./git/display.png">
 
 ### First Steps
 - `git clone` in the project and run
